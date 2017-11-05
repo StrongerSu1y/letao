@@ -1,5 +1,5 @@
 
-define(['jquery'], function($) {
+define(['jquery'], function ($) {
     //检测登录
     $.ajax({
         url: '/api/employee/checkRootLogin',
@@ -9,6 +9,19 @@ define(['jquery'], function($) {
                 location.href = '/login.html';
             }
         }
-    })
-    
+    });
+
+    //退出登录
+    $('.logout').on('click', function () {
+        $.ajax({
+            url: '/api/employee/employeeLogout',
+            type: 'get',
+            success: function (info) {
+                if (info.success) {
+                    location.href = '/login.html';
+                }
+            }
+        })
+    });
+
 });
