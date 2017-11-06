@@ -86,13 +86,13 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">商品描述</label>
                             <div class="col-xs-5 ckeditor">
-                                <textarea name="proDesc" rows="5" class="form-control input-sm"></textarea>
+                                <textarea name="proDesc" id="ck" rows="5" class="form-control input-sm"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-8">
                                 <!-- <a href="javascript:;" class="btn btn-success btn-sm pull-right">保 存</a> -->
-                                <input type="submit" name="" value="保 存" class="btn btn-success btn-sm pull-right">
+                                <input type="submit" value="保 存" class="btn btn-success btn-sm pull-right">
                             </div>
                         </div>
                     </form>
@@ -103,7 +103,7 @@
 
     <script type="text/template" id="brands">
         {{each rows}}
-        <option value="{{$value.id}}"></option>
+        <option value="{{$value.id}}">{{$value.brandName}}</option>
         {{/each}}
     </script>
 
