@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">商品封面</label>
                             <div class="col-xs-2 preview">
-                                <img src="./images/default.png">
+                                <img src="/public/images/default.png">
                                 <input type="file" id="upfile">
                                 <input type="hidden" name="pic">
                                 <div class="cover">
@@ -39,8 +39,8 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">所属品牌</label>
                             <div class="col-xs-5">
-                                <select name="brandId" class="form-control input-sm">
-                                    <option value="1">NIKE</option>
+                                <select name="brandId" class="form-control input-sm brand">
+                                    <option value="0">请选择</option>
                                 </select>
                             </div>
                         </div>
@@ -100,6 +100,12 @@
             </div>
         </div>
     </div>
+
+    <script type="text/template" id="brands">
+        {{each rows}}
+        <option value="{{$value.id}}"></option>
+        {{/each}}
+    </script>
 
     <?php include './common/script.html'; ?>
 
